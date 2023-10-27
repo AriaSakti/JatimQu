@@ -1,10 +1,11 @@
-import React from 'react'
-import { Dimensions, ScrollView, StyleSheet, TextInput, View, StatusBar, Text, Image} from 'react-native'
-import { SearchNormal1, Book1, Location, Profile, Moon, Map, Coin, MedalStar, More, Activity, Add, Lovely } from 'iconsax-react-native';
+import React, {useState} from 'react'
+import { Dimensions, ScrollView, StyleSheet, TextInput, View, StatusBar, Text, Image, TouchableOpacity} from 'react-native'
+import { SearchNormal1, Book1, Location, Profile, Moon, Map, Coin, MedalStar, More, Activity, Add, Lovely,Cloud } from 'iconsax-react-native';
 import logo from './src/images/JatimQuu.png'
 const win = Dimensions.get('window')
 
 export default function App() {
+  const [selected, setSelected] = useState(0)
   return (
     <ScrollView style={ styles.container }>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'}></StatusBar>
@@ -15,53 +16,59 @@ export default function App() {
         <TextInput style={ styles.search } placeholder='tempat mana yang ingin kamu ketahui?' placeholderTextColor={'grey'}></TextInput>
       </View>
       <View style={ styles.categoryContainer }>
-        <View style={ styles.categoryContainer2 }>
+        <TouchableOpacity style={[ styles.categoryContainer2,{ backgroundColor: selected == 1 ? '#88c2db' : '#aecafc' }]} onPress={()=> setSelected(1)}>
           <Book1 size="16" color="blue"/>
           <Text style={ styles.category }>Info</Text>
-        </View>
+        </TouchableOpacity>
 
-        <View style={ styles.categoryContainer2 }>
+        <TouchableOpacity style={[ styles.categoryContainer2,{ backgroundColor: selected == 2 ? '#88c2db' : '#aecafc' }]} onPress={()=> setSelected(2)}>
         <Moon size="16" color="blue" variant="Bold"/>
           <Text style={ styles.category }>hostelry</Text>
-        </View>
+        </TouchableOpacity>
 
-        <View style={ styles.categoryContainer2 }>
+        <TouchableOpacity style={[ styles.categoryContainer2,{ backgroundColor: selected == 3 ? '#88c2db' : '#aecafc' }]} onPress={()=> setSelected(3)}>
         <Coin size="16" color="blue" variant="Bold"/>
           <Text style={ styles.category }>my point</Text>
-        </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[ styles.categoryContainer2,{ backgroundColor: selected == 4 ? '#88c2db' : '#aecafc' }]} onPress={()=> setSelected(4)}>
+        <Cloud size="16" color="blue" variant="Bold"/>
+          <Text style={ styles.category }>Cuaca</Text>
+        </TouchableOpacity>
 
       </View>
       <View style={ styles.fiturContainer }>
-        <View style={ styles.fiturContainer2 }>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <Location size={54} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>Location</Text>
-        </View>
-        <View style={ styles.fiturContainer2 }>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <Profile size={54} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>Profile</Text>
-        </View>
-        <View style={ styles.fiturContainer2 }>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <MedalStar size={54} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>Rating</Text>
-        </View>
-        <View style={ styles.fiturContainer2 }>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <Map size={54} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>Rute</Text>
-        </View>
+        </TouchableOpacity>
+
       </View>
       <View style={ styles.fiturContainer }>
-        <View style={ styles.fiturContainer2 }>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <Activity size={50} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>aktifitas</Text>
-        </View>
-        <View style={ styles.fiturContainer2 }>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <Lovely size={50} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>Favorit</Text>
-        </View>
-        <View style={ styles.fiturContainer2 }>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.fiturContainer2 }>
           <Add size={50} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>Add Menu</Text>
-        </View>
+        </TouchableOpacity>
         <View style={ styles.fiturContainer2 }>
           <More size={50} variant='Linear' color='blue' />
           <Text style={ styles.fiturText }>More</Text>
