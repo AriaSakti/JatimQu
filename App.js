@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import React from 'react'
+import React from 'react' 
 import { Discover, Home, Profile } from './src/screens'
-import { Home3, SearchNormal, SearchNormal1, User } from 'iconsax-react-native'
+import { Home3, SearchNormal1, User } from 'iconsax-react-native'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()

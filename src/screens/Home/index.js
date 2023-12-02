@@ -74,7 +74,7 @@ export default function Home() {
           <Text style={ styles.fiturText }>More</Text>
         </View>
       </View>
-      <ScrollView horizontal style={ styles.iklanContainer }>
+      <ScrollView pagingEnabled horizontal style={ styles.iklanContainer }>
         <View style={ styles.iklanContainer2 }>
           <Text style={ styles.iklanHeader }>Keindahan Jawa Timur</Text>
           <Image style={styles.iklanImage} source={{ uri: 'https://c4.wallpaperflare.com/wallpaper/841/803/723/5bd3882fae229-wallpaper-preview.jpg' }} />

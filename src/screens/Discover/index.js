@@ -3,7 +3,7 @@ import {
   View,Text,FlatList,TouchableOpacity,StatusBar,Image,ScrollView,ImageBackground,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-export default Discover = () => {
+export default function Discover() {
   const [kategori, setKategori] = useState([
     {
       nama: 'profil',
