@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1093815273676",
+    "project_id": "jatimqu",
+    "storage_bucket": "jatimqu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093815273676:android:ef9cce4432425df3e6da69",
+        "android_client_info": {
+          "package_name": "com.jatimqu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACrp57M3GQgDY5XRCTbFtAI2pDiV6x6CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
